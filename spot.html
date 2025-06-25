@@ -33,6 +33,20 @@
       font-size: 1.1rem;
       margin-top: 1rem;
     }
+    .back-button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #003087;
+      color: white;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background-color 0.2s ease;
+    }
+    .back-button:hover {
+      background-color: #0055cc;
+    }
   </style>
 </head>
 <body>
@@ -40,6 +54,7 @@
     <h1 id="spot-title">Spot</h1>
     <img id="spot-image" src="" alt="Spot image" />
     <p id="spot-description">Loading...</p>
+    <a href="index.html" class="back-button">⬅️ Back to Map</a>
   </div>
 
   <script>
