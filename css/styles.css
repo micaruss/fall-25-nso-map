@@ -40,13 +40,6 @@ h1 {
   pointer-events: auto;
 }
 
-.map-spot:hover {
-  transform: scale(2.5);
-  background-color: blue;
-  z-index: 999 !important; /* Always bring hovered spot to front */
-  cursor: pointer;
-}
-
 .image-preview {
   position: absolute;
   display: none;
@@ -81,6 +74,17 @@ h1 {
   background-color: #0055cc;
 }
 
+/* Only apply hover scale on non-mobile */
+@media (min-width: 601px) {
+  .map-spot:hover {
+    transform: scale(2.5);
+    background-color: blue;
+    z-index: 999 !important;
+    cursor: pointer;
+  }
+}
+
+/* Adjustments for mobile devices */
 @media (max-width: 600px) {
   .map-spot {
     width: 8px !important;
@@ -88,11 +92,6 @@ h1 {
     font-size: 6px !important;
     line-height: 8px !important;
     transform: none !important;
-    z-index: 5 !important;
-  }
-
-  .map-spot:hover {
-    transform: none !important; 
   }
 
   .image-preview {
