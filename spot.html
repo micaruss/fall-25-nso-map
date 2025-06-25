@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Spot Details</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    body {
+      background-color: white;
+      color: black;
+      font-family: Arial, sans-serif;
+    }
+    .spot-container {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      text-align: center;
+    }
+    .spot-container img {
+      width: 100%;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    .spot-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .spot-container p {
+      font-size: 1.1rem;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="spot-container">
+    <h1 id="spot-title">Spot</h1>
+    <img id="spot-image" src="" alt="Spot image" />
+    <p id="spot-description">Loading...</p>
+  </div>
+
+  <script>
+    const spotData = {
+      1: "Benches by south east entrance of KMBL tower",
+      2: "Grass by south east entrance of KMBL Tower",
+      3: "Light pole by the south east entrance of KMBL Tower on the grass, across the way from the ESC stairs",
+      4: "Small tree by the south east entrance of KMBL Tower",
+      5: "KMBL quad triangle with with 2 trees",
+      6: "West side of the south side of ESC on narrow strip of grass. North side of narrow strip",
+      7: "West side of the south side of ESC on narrow strip of grass. South side of narrow strip",
+      8: "Inmost part of the grass directly south of the KMBL tower. By tall bushes. On grass",
+      9: "By small pine tree directly south of KMBL tower. On grass",
+      10: "Southwest side of the KMBL tower. By gutter",
+      11: "Next to lighter green tree enclosed with grass all around it",
+      12: "In between light pole and tree on the southwest side of the lawn south of KMBL Tower. Also on the west side of McKay, but south side of the west side",
+      13: "In the middle of 2 trees on the west side of the KMBL tower south lawn. There is a metal lid on the ground.",
+      14: "Next to the south west entrance of the KMBL tower. Next to 3 trees and a garbage can. On grass",
+      15: "South west side of the McKay on thin strip of grass. On the west side of bike racks.",
+      16: "South west side of the McKay. Small part of grass south of the stairs",
+      17: "On the west side of McKay. Between 2 trees, just north of the south stairs.",
+      18: "On the west side of McKay. Between trees. Next to large tree on the south side about the middle of the west side of the McKay.",
+      19: "On the west side of McKay. Between trees. Next to large tree on the north side about the middle of the west side of the McKay.",
+      20: "On the west side of the McKay, just south to the west side north entrance of the McKay",
+      21: "On the west side of the KMBL tower. Down the stairs",
+      22: "On the north west side of the McKay, close to west side north entrance of McKay",
+      23: "On the north west side of the McKay, just south of the bike rack",
+      24: "By the stone steps by the library signs and the fire hydrant. In between the JKB and library",
+      25: "Under the trees by the JKB entrance right next to the library",
+      26: "Grassy area outside the JKB. In-between the TMCB and JKB.",
+      27: "Grassy area right outside the TMCB. Between the TMCB and JKB"
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get("id");
+
+    const title = document.getElementById("spot-title");
+    const image = document.getElementById("spot-image");
+    const description = document.getElementById("spot-description");
+
+    if (spotData[id]) {
+      title.textContent = `Spot ${id}`;
+      image.src = `images/spot-${id}.jpeg`;
+      image.alt = `Spot ${id}`;
+      description.textContent = spotData[id];
+    } else {
+      title.textContent = "Spot Not Found";
+      description.textContent = "This spot does not exist.";
+      image.style.display = "none";
+    }
+  </script>
+</body>
+</html>
