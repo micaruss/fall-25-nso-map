@@ -80,3 +80,22 @@ h1 {
 .back-button:hover {
   background-color: #0055cc;
 }
+
+@media (max-width: 600px) {
+  /* Make circle numbers smaller */
+  .map-spot {
+    width: 6px;
+    height: 6px;
+    font-size: 6px;
+    line-height: 6px;
+  }
+
+  .map-spot:hover {
+    transform: scale(2); /* reduce zoom to avoid overlap */
+  }
+
+  /* Hide image previews on small screens */
+  .image-preview {
+    display: none !important;
+  }
+}
