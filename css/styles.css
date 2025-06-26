@@ -28,11 +28,11 @@ h1 {
   background-color: #003087;
   color: white;
   border-radius: 50%;
-  width: 10px;
-  height: 10px;
+  width: 11px;
+  height: 11px;
   text-align: center;
-  line-height: 10px;
-  font-size: 8px;
+  line-height: 11px;
+  font-size: 6px;
   font-weight: bold;
   text-decoration: none;
   transition: transform 0.1s ease, background-color 0.1s ease;
