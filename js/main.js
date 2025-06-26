@@ -2,8 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
     const previewPairs = [];
   
-    // Generate previewPairs for spots 1 through 27
-    for (let i = 1; i <= 27; i++) {
+    // Generate previewPairs for spots 1 through 28
+    for (let i = 1; i <= 28; i++) {
       previewPairs.push({
         spotId: `spot-${i}`,
         previewId: `preview-${i}`
