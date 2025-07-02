@@ -24,16 +24,28 @@
       text-decoration: underline;
     }
 
-    table {
-      width: 90%;
+    .container {
+      max-width: 1000px;
       margin: 2rem auto;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    table {
+      width: 100%;
       border-collapse: collapse;
+      margin-top: 1.5rem;
     }
 
     th, td {
       border: 1px solid #ccc;
       padding: 12px;
-      text-align: center;
+      text-align: left;
     }
 
     th {
@@ -42,12 +54,14 @@
     }
 
     tr:nth-child(even) {
-      background-color: #f2f2f2;
+      background-color: #f9f9f9;
     }
 
-    h1 {
-      text-align: center;
-      margin-top: 1.5rem;
+    .group-label {
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #003087;
     }
   </style>
 </head>
@@ -58,35 +72,38 @@
     <a href="rooms.html">🏫 Room Assignments</a>
   </nav>
 
-  <h1>Room Assignments</h1>
+  <div class="container">
+    <h1>Room Assignments by Group</h1>
 
-  <table>
-    <thead>
-      <tr>
-        <th>Group</th>
-        <th>Mentor</th>
-        <th>Room</th>
-        <th>Building</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>1</td>
-        <td>Jessie Smith</td>
-        <td>204</td>
-        <td>KMBL</td>
-        <td>9:00 AM</td>
-      </tr>
-      <tr>
-        <td>2</td>
-        <td>Alex Chen</td>
-        <td>210</td>
-        <td>JFSB</td>
-        <td>9:00 AM</td>
-      </tr>
-      <!-- Add more rows here -->
-    </tbody>
-  </table>
+    <!-- Example Group Section -->
+    <div class="group-section">
+      <p class="group-label">🔴 Red Group</p>
+      <table>
+        <thead>
+          <tr><th>Mentor</th><th>Room</th><th>Building</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Jessica Lee</td><td>210</td><td>KMBL</td></tr>
+          <tr><td>Mark Gomez</td><td>321</td><td>JFSB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="group-section">
+      <p class="group-label">🟠 Orange Group</p>
+      <table>
+        <thead>
+          <tr><th>Mentor</th><th>Room</th><th>Building</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Emily Chan</td><td>155</td><td>TMCB</td></tr>
+          <tr><td>Daniel Ruiz</td><td>108</td><td>JKB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Add other groups below (Yellow, Green, Blue, Purple, etc.) -->
+
+  </div>
 </body>
 </html>
