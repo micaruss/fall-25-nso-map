@@ -3,13 +3,33 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Spot Details</title>
+  <title>Spot Details | Fall NSO</title>
   <link rel="stylesheet" href="styles.css" />
   <style>
     body {
       background-color: white;
       color: black;
       font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #003087;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
     }
     .spot-container {
       max-width: 800px;
@@ -50,6 +70,12 @@
   </style>
 </head>
 <body>
+    <nav>
+        <a href="home.html">📅 Schedule</a>
+        <a href="index.html">📍 Mentor Map</a>
+        <a href="rooms.html">🏫 Room Assignments</a>
+    </nav>
+
   <div class="spot-container">
     <h1 id="spot-title">Spot</h1>
     <img id="spot-image" src="" alt="Spot image" />
