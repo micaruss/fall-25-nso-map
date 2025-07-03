@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const previewPairs = [];
   
     // Generate previewPairs for spots 1 through 28
-    for (let i = 1; i <= 52; i++) {
+    for (let i = 1; i <= 157; i++) {
       previewPairs.push({
         spotId: `spot-${i}`,
         previewId: `preview-${i}`
