@@ -207,7 +207,7 @@ footer {
 }
 
 @media (max-width: 768px) {
-  #legend {
+  #sidebar {
     position: fixed;
     left: -250px;
     top: 0;
@@ -221,11 +221,11 @@ footer {
     z-index: 998;
   }
 
-  #legend.open {
+  #sidebar.open {
     left: 0;
   }
 
-  #legend-toggle {
+  #sidebar-toggle {
     display: block;
   }
 

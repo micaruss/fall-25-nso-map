@@ -37,3 +37,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const legend = document.getElementById("legend");
     legend.classList.toggle("open");
   });
+
+  const toggleBtn = document.getElementById("legend-toggle");
+const sidebar = document.getElementById("sidebar");
+
+toggleBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("open");
+});
