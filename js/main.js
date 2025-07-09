@@ -32,3 +32,8 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     }
   });
+
+  document.getElementById("legend-toggle").addEventListener("click", function () {
+    const legend = document.getElementById("legend");
+    legend.classList.toggle("open");
+  });
