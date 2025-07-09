@@ -213,3 +213,40 @@ footer {
     margin-left: 0 !important;
   }
 }
+
+/* Navigation bar base style */
+#top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #003087;
+  padding: 10px;
+  flex-wrap: nowrap; /* prevents wrapping */
+  overflow-x: auto; /* allows side scroll if needed */
+}
+
+#top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  white-space: nowrap; /* prevents line breaks in each link */
+}
+
+/* Shrink nav on small screens */
+@media (max-width: 600px) {
+  #top-nav {
+    gap: 0.5rem;
+    padding: 8px;
+  }
+
+  #top-nav a {
+    font-size: 0.85rem;
+  }
+}
+
+#top-nav {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  scroll-behavior: smooth;
+}
