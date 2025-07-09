@@ -204,31 +204,11 @@ footer {
   font-size: 16px;
   border-radius: 6px;
   cursor: pointer;
-}
-
+} 
 @media (max-width: 768px) {
-  #sidebar {
-    position: fixed;
-    left: -250px;
-    top: 0;
-    height: 100%;
-    width: 230px;
-    background-color: white;
-    box-shadow: 2px 0 5px rgba(0,0,0,0.2);
-    padding: 20px;
-    overflow-y: auto;
-    transition: left 0.3s ease;
-    z-index: 998;
+  #legend, #sidebar {
+    display: none;
   }
-
-  #sidebar.open {
-    left: 0;
-  }
-
-  #sidebar-toggle {
-    display: block;
-  }
-
   #layout {
     margin-left: 0 !important;
   }
