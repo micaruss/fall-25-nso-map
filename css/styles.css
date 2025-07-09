@@ -100,3 +100,40 @@ h1 {
     opacity: 0 !important;
   }
 }
+
+footer {
+  background-color: #003087;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.map-spot[data-group="pink"] {
+  background-color: red;
+}
+
+.map-spot[data-group="yellow"] {
+  background-color: gold;
+}
+
+.map-spot[data-group="green"] {
+  background-color: green;
+}
+
+.map-spot[data-group="blue"] {
+  background-color: dodgerblue;
+}
+
+.map-spot[data-group="black"] {
+  background-color: black;
+}
+
+.map-spot[data-group="purple"] {
+  background-color: purple;
+}
+
+.map-spot[data-group="orange"] {
+  background-color: orange;
+}
