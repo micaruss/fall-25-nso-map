@@ -90,7 +90,7 @@ h1 {
     width: 4px !important;
     height: 4px !important;
     font-size: 2px !important;
-    line-height: 3px !important;
+    line-height: 4px !important;
     transform: none !important;
   }
 
@@ -234,19 +234,38 @@ footer {
   white-space: nowrap; /* prevents line breaks in each link */
 }
 
-/* Shrink nav on small screens */
+
+/* Nav bar styling */
+#top-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #003087;
+  padding: 10px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+#top-nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 6px 8px;
+}
+
+/* Mobile tweaks */
 @media (max-width: 600px) {
+  #top-nav a {
+    font-size: 0.85rem;
+    padding: 4px 6px;
+  }
+
   #top-nav {
     gap: 0.5rem;
     padding: 8px;
   }
-
-  #top-nav a {
-    font-size: 0.85rem;
-  }
-}
-
-#top-nav {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  scroll-behavior: smooth;
 }
