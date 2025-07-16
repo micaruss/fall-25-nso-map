@@ -269,3 +269,9 @@ footer {
     padding: 8px;
   }
 }
+
+.video-block p {
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}

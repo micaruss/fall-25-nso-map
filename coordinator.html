@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fall NSO | Coordinators</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+      font-family: Arial, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+  </style>
+</head>
+<body>
+  <nav id="top-nav">
+    <a href="home.html">📅 Schedule</a>
+    <a href="index.html">📍 Mentor Map</a>
+    <a href="rooms.html">🏫 Room Assignments</a>
+    <a href="help.html">⛑️ Help Videos</a>
+    <a href="coordinator.html">🧭 Coordinators</a>
+    <a href="supervisor.html">🗂️ Supervisors</a>
+  </nav>
+
+  <div class="container">
+    <h1>Coordinator Dashboard</h1>
+    <p>Welcome, coordinator! Use this space to track mentor progress, manage resources, and view check-ins.</p>
+
+    <ul>
+      <li>✅ View attendance reports</li>
+      <li>📝 Assign last-minute replacements</li>
+      <li>📊 Access mentor feedback submissions</li>
+      <li>📁 Download important forms</li>
+    </ul>
+  </div>
+
+  <script>
+  const loginTime = localStorage.getItem("loginTime");
+  const maxSession = 10 * 60 * 1000;
+
+  if (!localStorage.getItem("authenticated") || !loginTime || Date.now() - parseInt(loginTime, 10) > maxSession) {
+    alert("Access denied or session expired. Please sign in again.");
+    localStorage.removeItem("authenticated");
+    localStorage.removeItem("loginTime");
+    window.location.href = "login.html";
+  }
+</script>
+</body>
+</html>

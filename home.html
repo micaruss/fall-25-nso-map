@@ -68,6 +68,7 @@
         <a href="index.html">📍 Mentor Map</a>
         <a href="rooms.html">🏫 Room Assignments</a>
         <a href="help.html">⛑️ Help Videos</a>
+        <a href="#" id="login-btn" onclick="startLogin()">🔐 Login</a>
       </nav>
 
   <div class="container">
@@ -111,7 +112,7 @@
 
     <!-- Day 3 -->
     <div class="day-section">
-      <h2>Saturday, August 30</h2>
+      <h2>Tuesday, Septemeber 2</h2>
       <table>
         <thead>
           <tr><th>Time</th><th>Responsibility</th><th>Location</th></tr>
@@ -126,5 +127,49 @@
       </table>
     </div>
   </div>
+
+  <script>
+  const nav = document.getElementById("top-nav");
+
+  function startLogin() {
+    sessionStorage.setItem("returnPage", window.location.pathname);
+    window.location.href = "login.html";
+  }
+
+  function isLoggedIn() {
+    const auth = localStorage.getItem("authenticated");
+    const loginTime = localStorage.getItem("loginTime");
+
+    if (!auth || !loginTime) return false;
+
+    const now = Date.now();
+    const maxSession = 10 * 60 * 1000; // 10 minutes
+
+    if (now - parseInt(loginTime, 10) > maxSession) {
+      localStorage.removeItem("authenticated");
+      localStorage.removeItem("loginTime");
+      return false;
+    }
+
+    return true;
+  }
+
+  if (nav) {
+    const loginBtn = document.getElementById("login-btn");
+
+    if (isLoggedIn()) {
+      if (loginBtn) loginBtn.style.display = "none";
+
+      if (!document.getElementById("coordinator-link")) {
+        nav.innerHTML += `
+          <a href="coordinator.html" id="coordinator-link">🧭 Coordinators</a>
+          <a href="supervisor.html" id="supervisor-link">🗂️ Supervisors</a>
+        `;
+      }
+    } else {
+      if (loginBtn) loginBtn.style.display = "inline-block";
+    }
+  }
+</script>
 </body>
 </html>
