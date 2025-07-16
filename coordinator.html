@@ -3,9 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Fall NSO | Coordinators</title>
+  <title>Fall NSO | Coordinator Dashboard</title>
   <link rel="stylesheet" href="css/styles.css" />
   <style>
+    nav {
+      background-color: #003087;
+      text-align: center;
+      padding: 12px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
     .container {
       max-width: 1000px;
       margin: 2rem auto;
@@ -13,14 +31,59 @@
       font-family: Arial, sans-serif;
     }
 
-    h1 {
+    h1, h2 {
       text-align: center;
-      margin-bottom: 1.5rem;
+      margin-bottom: 1rem;
     }
 
-    p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+    .sub-nav {
+      text-align: center;
+      margin: 1.5rem 0;
+    }
+
+    .sub-nav a {
+      background-color: #003087;
+      color: white;
+      padding: 8px 16px;
+      margin: 0 8px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .sub-nav a:hover {
+      background-color: #002060;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 1rem;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 12px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #003087;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+
+    ul {
+      margin-top: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
     }
   </style>
 </head>
@@ -30,32 +93,118 @@
     <a href="index.html">📍 Mentor Map</a>
     <a href="rooms.html">🏫 Room Assignments</a>
     <a href="help.html">⛑️ Help Videos</a>
-    <a href="coordinator.html">🧭 Coordinators</a>
-    <a href="supervisor.html">🗂️ Supervisors</a>
+    <!-- These will auto-appear if authenticated -->
+    <a href="coordinator.html" id="coordinator-link">🧭 Coordinators</a>
+    <a href="supervisor.html" id="supervisor-link">🗂️ Supervisors</a>
   </nav>
 
   <div class="container">
     <h1>Coordinator Dashboard</h1>
-    <p>Welcome, coordinator! Use this space to track mentor progress, manage resources, and view check-ins.</p>
 
-    <ul>
-      <li>✅ View attendance reports</li>
-      <li>📝 Assign last-minute replacements</li>
-      <li>📊 Access mentor feedback submissions</li>
-      <li>📁 Download important forms</li>
-    </ul>
+    <div class="sub-nav">
+      <a href="#schedule">📅 Schedule</a>
+      <a href="#assignments">📋 Assignments</a>
+    </div>
+
+    <h2 id="schedule">📅 Schedule</h2>
+
+    <div class="day-section">
+      <h3>Thursday, August 28</h3>
+      <table>
+        <thead>
+          <tr><th>Time</th><th>Assignment</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>6:30–7:00 AM</td><td>Coordinator Check-in</td><td>North Side of Marriott Center</td></tr>
+          <tr><td>7:00–7:30 AM</td><td>Mentor Check-In</td><td>North Side of Marriott Center</td></tr>
+          <tr><td>7:30–8:30 AM</td><td>Prepare for Student Check-in</td><td>Marriott Center Parking Lot</td></tr>
+          <tr><td>8:30–9:30 AM</td><td>Student Check-in</td><td>Marriott Center Parking Lot</td></tr>
+          <tr><td>9:30–10:00 AM</td><td>Help Seat Students</td><td>Marriott Center</td></tr>
+          <tr><td>10:00–11:00 AM</td><td>Cougar Rally</td><td>Marriott Center</td></tr>
+          <tr><td>11:00–12:00 PM</td><td>Convocation</td><td>Marriott Center</td></tr>
+          <tr><td>12:00–1:00 PM</td><td>Lunch</td><td>JFSB Quad</td></tr>
+          <tr><td>1:00–3:00 PM</td><td>On Call for Becoming BYU</td><td>JFSB Quad</td></tr>
+          <tr><td>3:00–3:30 PM</td><td>Clean Up</td><td>JKB</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="day-section">
+      <h3>Friday, August 29</h3>
+      <table>
+        <thead>
+          <tr><th>Time</th><th>Assignment</th><th>Location</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>7:45–8:00 AM</td><td>Coordinator Check-in</td><td>JFSB Quad</td></tr>
+          <tr><td>8:00–8:15 AM</td><td>Mentor Check-in — Breakfast</td><td>JFSB Quad</td></tr>
+          <tr><td>8:15–8:30 AM</td><td>Help Mentors Find their Spots</td><td>JFSB Quad</td></tr>
+          <tr><td>8:30–12:00 PM</td><td>Help with Late Check-in</td><td>JFSB Quad</td></tr>
+          <tr><td>9:00–12:00 PM</td><td>Monitor Cougar Crash Course</td><td>Across Campus</td></tr>
+          <tr><td>12:00–12:45 PM</td><td>Lunch</td><td>JFSB Quad</td></tr>
+          <tr><td>12:45–1:15 PM</td><td>Help Monitor College Experiences</td><td>Brigham Square</td></tr>
+          <tr><td>1:15–1:30 PM</td><td>Clean Up</td><td>JKB</td></tr>
+      </table>
+    </div>
+
+    <h2 id="assignments">📋 Assignment Breakdown</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Day 1 Assignment</th>
+      <th>Day 2 Assignment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Avery</td><td>🔴 Red Color Rep</td><td>🔴 Red Color Rep</td></tr>
+    <tr><td>Sage</td><td>🔴 Red Color Rep</td><td>🔴 Red Color Rep</td></tr>
+    <tr><td>Matthew</td><td>Daidre's Army</td><td>Daidre's Army</td></tr>
+    <tr><td>Emily</td><td>⚫️ Black Color Rep</td><td>⚫️ Black Color Rep</td></tr>
+    <tr><td>Marissa</td><td>⚫️ Black Color Rep</td><td>⚫️ Black Color Rep</td></tr>
+    <tr><td>Katie</td><td>Daidre's Army</td><td>Daidre's Army</td></tr>
+    <tr><td>Ben</td><td>🟡 Yellow Color Rep</td><td>🟡 Yellow Color Rep</td></tr>
+    <tr><td>Isaac</td><td>🟡 Yellow Color Rep</td><td>🟡 Yellow Color Rep</td></tr>
+    <tr><td>Abbie</td><td>🔵 Blue Color Rep</td><td>🔵 Blue Color Rep</td></tr>
+    <tr><td>Monte</td><td>Daidre's Army</td><td>Daidre's Army</td></tr>
+    <tr><td>Spencer</td><td>🔵 Blue Color Rep</td><td>🔵 Blue Color Rep</td></tr>
+    <tr><td>Allie</td><td>NSO Team</td><td>NSO Team</td></tr>
+    <tr><td>Jonah</td><td>Daidre's Army</td><td>Daidre's Army</td></tr>
+    <tr><td>Natalie</td><td>🟢 Green Color Rep</td><td>🟢 Green Color Rep</td></tr>
+    <tr><td>Nicole</td><td>🟢 Green Color Rep</td><td>🟢 Green Color Rep</td></tr>
+    <tr><td>Rachel</td><td>NSO Team</td><td>NSO Team</td></tr>
+    <tr><td>Amanda</td><td>🟣 Purple Color Rep</td><td>🟣 Purple Color Rep</td></tr>
+    <tr><td>Logan</td><td>⚪️ Silver/Transfers Color Rep</td><td>⚪️ Silver/Transfers Color Rep</td></tr>
+    <tr><td>Jared</td><td>NSO Team</td><td>NSO Team</td></tr>
+    <tr><td>Daisy</td><td>🟠 Orange Color Rep</td><td>🟠 Orange Color Rep</td></tr>
+    <tr><td>Emma</td><td>🟣 Purple Color Rep</td><td>🟣 Purple Color Rep</td></tr>
+    <tr><td>Jae</td><td>🟠 Orange Color Rep</td><td>🟠 Orange Color Rep</td></tr>
+  </tbody>
+</table>
   </div>
 
-  <script>
-  const loginTime = localStorage.getItem("loginTime");
-  const maxSession = 10 * 60 * 1000;
+<footer>
+<p>Fall 2025 NSO | BYU First-Year Experience</p>
+</footer>
 
-  if (!localStorage.getItem("authenticated") || !loginTime || Date.now() - parseInt(loginTime, 10) > maxSession) {
-    alert("Access denied or session expired. Please sign in again.");
-    localStorage.removeItem("authenticated");
-    localStorage.removeItem("loginTime");
-    window.location.href = "login.html";
-  }
-</script>
+  <script>
+    function startLogin() {
+      sessionStorage.setItem("returnPage", window.location.pathname);
+      window.location.href = "login.html";
+    }
+
+    // Show Coordinator/Supervisor buttons only if logged in
+    const nav = document.getElementById("top-nav");
+    const loginTime = parseInt(localStorage.getItem("loginTime"));
+    const isAuthenticated = localStorage.getItem("authenticated") === "true";
+    const isExpired = !loginTime || (Date.now() - loginTime > 10 * 60 * 1000); // 10 min
+
+    if (isAuthenticated && !isExpired) {
+      document.getElementById("login-btn").style.display = "none";
+    } else {
+      localStorage.removeItem("authenticated");
+      localStorage.removeItem("loginTime");
+    }
+  </script>
 </body>
 </html>
