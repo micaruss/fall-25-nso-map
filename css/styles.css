@@ -112,7 +112,7 @@ footer {
 }
 
 .map-spot[data-group="pink"] {
-  background-color: red;
+  background-color: deeppink;
 }
 
 .map-spot[data-group="yellow"] {
@@ -120,23 +120,23 @@ footer {
 }
 
 .map-spot[data-group="green"] {
-  background-color: green;
+  background-color: limegreen;
 }
 
 .map-spot[data-group="blue"] {
-  background-color: dodgerblue;
+  background-color: royalblue;
 }
 
 .map-spot[data-group="black"] {
-  background-color: black;
+  background-color: darkviolet;
 }
 
 .map-spot[data-group="purple"] {
-  background-color: purple;
+  background-color: darkviolet;
 }
 
 .map-spot[data-group="orange"] {
-  background-color: orange;
+  background-color: darkorange;
 }
 #layout {
   display: flex;
@@ -178,13 +178,13 @@ footer {
   border: 1px solid #ccc;
 }
 
-.legend-color.red    { background-color: red; }
+.legend-color.pink    { background-color: deeppink; }
 .legend-color.yellow { background-color: yellow; }
-.legend-color.green  { background-color: green; }
-.legend-color.blue   { background-color: blue; }
-.legend-color.black  { background-color: black; }
-.legend-color.purple { background-color: purple; }
-.legend-color.orange { background-color: orange; }
+.legend-color.green  { background-color: limegreen; }
+.legend-color.blue   { background-color: royalblue; }
+.legend-color.black  { background-color: darkviolet; }
+.legend-color.purple { background-color: darkviolet; }
+.legend-color.orange { background-color: darkorange; }
 
 #map-container {
   flex-grow: 1;
