@@ -62,7 +62,7 @@ h1 {
   padding: 10px 20px;
   font-size: 16px;
   margin-top: 20px;
-  background-color: blue;
+  background-color: navy;
   color: white;
   border: none;
   border-radius: 6px;
@@ -78,7 +78,7 @@ h1 {
 @media (min-width: 601px) {
   .map-spot:hover {
     transform: scale(2.5);
-    background-color: blue;
+    background-color: navy;
     z-index: 999 !important;
     cursor: pointer;
   }
@@ -102,13 +102,12 @@ h1 {
 }
 
 footer {
-  background-color: blue;
+  background-color: navy;
   color: white;
   text-align: center;
   padding: 15px 10px;
   font-size: 0.9rem;
   margin-top: 30px;
-  
 }
 
 .map-spot[data-group="pink"] {
@@ -220,7 +219,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: blue;
+  background-color: navy;
   padding: 10px;
   flex-wrap: nowrap; /* prevents wrapping */
   overflow-x: auto; /* allows side scroll if needed */
@@ -241,7 +240,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: blue;
+  background-color: navy;
   padding: 10px;
   flex-wrap: nowrap;
   overflow-x: auto;
