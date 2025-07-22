@@ -62,7 +62,7 @@ h1 {
   padding: 10px 20px;
   font-size: 16px;
   margin-top: 20px;
-  background-color: #003087;
+  background-color: blue;
   color: white;
   border: none;
   border-radius: 6px;
@@ -102,7 +102,7 @@ h1 {
 }
 
 footer {
-  background-color: #003087;
+  background-color: blue;
   color: white;
   text-align: center;
   padding: 15px 10px;
@@ -220,7 +220,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: #003087;
+  background-color: blue;
   padding: 10px;
   flex-wrap: nowrap; /* prevents wrapping */
   overflow-x: auto; /* allows side scroll if needed */
@@ -241,7 +241,7 @@ footer {
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  background-color: #003087;
+  background-color: blue;
   padding: 10px;
   flex-wrap: nowrap;
   overflow-x: auto;
