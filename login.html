@@ -57,7 +57,7 @@
       const correctPassword = "byu150";
       const entered = document.getElementById("password").value;
       const errorText = document.getElementById("error");
-      const returnTo = sessionStorage.getItem("returnPage") || "home.html";
+      const returnTo = sessionStorage.getItem("returnPage") || "index.html";
 
       if (entered === correctPassword) {
         localStorage.setItem("authenticated", "true");
